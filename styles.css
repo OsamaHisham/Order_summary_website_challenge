@@ -18,12 +18,13 @@ body {
   margin: 4rem;
   border-radius: 1rem;
   padding-bottom: unset;
+  box-shadow: -33px 19px 41px rgba(0, 0, 0, 0.26),
+    -29px 33px 33px rgba(0, 0, 0, 0.14);
 }
 
 .nav-bar {
   margin: 1rem 2rem 5rem 3rem;
   display: flex;
-
 }
 
 .logo {
@@ -62,7 +63,7 @@ body {
 }
 
 .highlight {
-  border-bottom: .2rem blue solid;
+  border-bottom: 0.2rem blue solid;
 }
 .nav-list a:nth-child(3) {
   color: blue;
@@ -136,7 +137,7 @@ span {
 
 .personal-img {
   display: flex;
-  margin-right: 10rem; 
+  margin-right: 10rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -163,7 +164,7 @@ span {
 
   .self-intro {
     font-size: 3rem;
-    margin-bottom: 2rem;;
+    margin-bottom: 2rem;
   }
 
   .self-description {
@@ -172,13 +173,13 @@ span {
   }
 
   .personal-img {
-    margin-right: -2rem; 
-    
+    margin-right: -2rem;
   }
   .personal-img > img {
-    height: 70%; 
+    height: 70%;
   }
-  .card-description, .personal-img {
+  .card-description,
+  .personal-img {
     margin-bottom: -12rem;
   }
 }

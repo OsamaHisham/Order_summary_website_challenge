@@ -1,0 +1,233 @@
+/* Google-fonts for the self intro */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #99e4f5;
+}
+
+/* Nav-Bar */
+
+.content-wrapper {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 4rem;
+  border-radius: 1rem;
+  padding-bottom: unset;
+}
+
+.nav-bar {
+  margin: 1rem 2rem 5rem 3rem;
+  display: flex;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.logo > img {
+  border-radius: 50%;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 70%;
+}
+.nav-list > a {
+  margin-left: 3vw;
+  text-decoration: none;
+  color: #000;
+}
+
+.buy-btn {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-right: -0.2rem;
+}
+.buy-btn > a {
+  text-decoration: none;
+  background-color: blue;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+/* Main Card Contnent */
+
+.card-content {
+  display: flex;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  margin-right: -10rem;
+}
+
+.what-i-do {
+  /* Fallback color */
+  color: #3696ef;
+  font: 1.5rem Roboto, sans-serif;
+  margin-left: 3rem;
+  margin-bottom: 4rem;
+  /* Gradient Color */
+  background-image: linear-gradient(
+    to right,
+    #3696ef,
+    #d84fee,
+    #d93c75,
+    #f81111,
+    #f81515
+  );
+  /* backround color to become text color */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.self-intro {
+  font-size: 6rem;
+  margin-left: 2rem;
+  font-family: "Red Hat Display", sans-serif;
+  margin-bottom: 4rem;
+}
+span {
+  color: #0000ff;
+}
+
+.self-description {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  padding-right: 10%;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 8rem;
+}
+
+.cv-btn {
+  display: flex;
+  margin-left: 4.5rem;
+  height: 100%;
+  align-items: flex-start;
+}
+.cv-btn > a {
+  text-decoration: none;
+  color: #fff;
+  background-color: blue;
+  font: 1rem Roboto, sans-serif;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.personal-img {
+  display: flex;
+  margin-right: 10rem; 
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-list {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 17%;
+  }
+
+  .logo > img {
+    width: 30%;
+  }
+
+  .buy-btn {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .buy-btn > a {
+    padding: 0.8rem;
+  }
+
+  .what-i-do {
+    font-size: 1.2rem;
+  }
+
+  .self-intro {
+    font-size: 3rem;
+    margin-bottom: 2rem;;
+  }
+
+  .self-description {
+    font-size: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .personal-img {
+    margin-right: -2rem; 
+    
+  }
+  .personal-img > img {
+    height: 70%; 
+  }
+  .card-description, .personal-img {
+    margin-bottom: -12rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+
+  }
+
+  .nav-list {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 17%;
+  }
+
+  .logo > img {
+    width: 30%;
+  }
+
+  .buy-btn {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .buy-btn > a {
+    padding: 0.8rem;
+  }
+
+  .what-i-do {
+    font-size: 1.2rem;
+  }
+
+  .self-intro {
+    font-size: 3rem;
+    margin-bottom: 2rem;;
+  }
+
+  .self-description {
+    font-size: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .personal-img {
+    margin-right: -2rem; 
+    
+  }
+  .personal-img > img {
+    height: 70%; 
+  }
+  .card-description, .personal-img {
+    margin-bottom: -12rem;
+  }
+}

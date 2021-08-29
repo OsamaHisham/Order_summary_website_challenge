@@ -1,0 +1,369 @@
+/* Google-fonts for the self intro */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #99e4f5;
+}
+
+/* Main card wrapper */
+
+.card-wrapper {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: -5px 20px 15px rgba(0, 0, 0, 0.26),
+    -10px 10px 20px rgba(0, 0, 0, 0.14);
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  padding: 2rem 1rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  max-width: 70%;
+}
+
+.nav-links {
+  display: flex;
+  min-width: 50vw;
+  justify-content: space-between;
+}
+.nav-links li {
+  list-style: none;
+  font-size: clamp(100%, 1.6vw, 1.6vw);
+}
+.nav-links li:last-child {
+  display: none;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+.nav-links li a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: blue;
+  position: absolute;
+  bottom: -0.6em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;  
+}
+.nav-links li a:hover::after {
+  transform: scale(1, 1);
+  color: blue; 
+  transition: transform ease-in-out 250ms;  
+}
+.nav-links li a:hover {
+  color: blue;
+  font-weight: bold;
+  top: -0.2rem; 
+  transition: all ease-in-out 350ms;  
+}
+
+/* Active page Link */
+#active-link {
+  color: blue;
+  font-weight: bold;
+  top: -0.2rem; 
+}
+#active-link::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: blue;
+  position: absolute;
+  bottom: -0.6em;
+  left: 0;
+  right: 0;
+}
+
+.buy-btn {
+  display: flex;
+  font-size: clamp(100%, 2vw, 2vw);
+}
+.buy-btn a {
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  padding: 1em;
+  border-radius: 3em;
+  
+}
+
+.mobile-tablet-nav-bar div {
+  background-color: blue;
+  width: 1.5rem;
+  height: 0.2rem;
+  margin: 0.35rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease
+}
+.mobile-tablet-nav-bar {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* Styling and showing the Nav-Bar toggle lines */
+
+  .nav-links li a::after {
+    display: hidden;
+    content: none;
+  }
+
+  .logo img {
+    max-width: 50%;
+  }
+
+  .buy-btn {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0;
+    margin: auto 2rem;
+    padding: 2rem 0;
+    height: 60vh;
+    top: 16vh;
+    width: calc(100% - 4rem);
+    background-color: #e7eaeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-150%);
+    transition: transform 0.5s ease-in;
+    border-radius: 0.5rem;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+  }
+  .nav-links li a:hover {
+    background-color: rgb(73, 212, 212);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    color: blue;
+    transition: all .3s ease;
+  }
+  #active-link:hover {
+    background-color: unset;
+    padding: unset;
+
+  }
+
+  .nav-links li:last-child {
+    display: flex;
+  }
+  .nav-links li:last-child a {
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 1em;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .mobile-tablet-nav-bar {
+    display: block;
+    margin-top: 10px;
+  }
+  
+}
+
+/* Javascript class to toggle the navbar on mobile and tablet view */
+
+.nav-toggle-active {
+  transform: translateY(0%);
+}
+
+/* Animating the nav links for the mobile and tablet view*/
+
+@keyframes navLinksFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Changing the shape of the toggle */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-6.5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-6.5px, -6px);
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* Main Card Content */
+
+
+  
+section {
+  margin: 2rem;
+  margin-bottom: unset;
+}
+
+.grid-wrpper {
+  margin: 1rem;
+  margin-bottom: unset;
+}
+
+.card-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'what-i-do what-i-do'
+                        'intro intro'
+                        'description image '
+                        'cv-btn image';
+  margin-bottom: -1.2rem;
+
+}
+
+.what-i-do {
+  /* For the grid template area */
+  grid-area: what-i-do;
+  
+  
+  margin-bottom: 2rem;
+
+  /* Fallback color */
+  color: #3696ef;
+  font: Roboto, sans-serif;
+  font-size: clamp(1.5vw, 2vw, 2vw);
+  /* Gradient Color */
+background-image: linear-gradient(
+  to right,
+  #3696ef 0%,
+  #d84fee 40%,
+  #d93c75 80%,
+  #f81111 100%,
+  #f81515
+);
+/* backround color to become text color */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.self-intro {
+  /* For the grid template area */
+  grid-area: intro;
+
+  font-size: clamp(1rem, 7vw, 10rem);
+  margin-left: 0rem;
+  font-family: "Red Hat Display", sans-serif;
+  margin-bottom: .5rem;
+  margin-left: 1rem;
+}
+span {
+  color: #0000ff;
+}
+
+.self-description {
+  /* For the grid template area */
+  grid-area: description;
+
+  font-size: clamp(2vw, 2vw, 150%);
+  min-width: 90%;
+  max-width: 150%;
+  margin-right: -3rem;
+  padding-top: 2rem;
+  
+  margin-left: 1rem;
+  /* padding-right: 10%; */
+  color: rgba(0, 0, 0, 0.45);
+  padding-bottom: 10rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.cv-btn {
+  /* For the grid template area */
+  grid-area: cv-btn;
+
+  margin-top: -5rem;
+  font-size: clamp(1vw, 1.5vw, 150%);
+  padding-left: 1rem;
+
+}
+.cv-btn  a {
+  
+  text-decoration: none;
+  color: #fff;
+  background-color: blue;
+  font-family: "Red Hat Display", sans-serif;
+  padding: 1.2em 2em;
+  border-radius: 2em;
+
+}
+
+.personal-img {
+  /* For the grid template area */
+  grid-area: image;
+  /* margin-top: -3.5rem; */
+  text-align: right;
+  
+}
+.personal-img img {
+  width: clamp(50%, 80%, 150%);
+}
+
+
+@media screen and (min-width: 1440px) { 
+
+  .personal-img {
+
+    margin-top: -15rem;
+    text-align: center;
+    
+  }
+
+  .what-i-do { 
+    padding-bottom: 4rem;
+  }
+
+  .self-intro {
+    margin-bottom: 5rem;
+  }
+
+  .what-i-do {
+    margin-bottom: 5rem;
+  }
+
+  .self-description {
+    margin-bottom: 8rem;
+  }
+
+}
